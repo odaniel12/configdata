@@ -1,15 +1,20 @@
-eureka:
-  client:
-    service-url:
+eureka: 
+  client: 
+    service-url: 
       defaultZone: "http://localhost:8099/eureka"
-server:
+server: 
   port: 8089
-spring:
-  cloud:
-    gateway:
-      routes:
-        -
+spring: 
+  cloud: 
+    gateway: 
+      routes: 
+        - 
           id: client-service
-          predicates:
-            - Path=/clientBank/**
+          predicates: 
+            - Path=/clientBank/
           uri: "http://localhost:8084/"
+        - 
+          id: product-service
+          predicates: 
+            - Path=/product/
+          uri: "http://localhost:8086/"
