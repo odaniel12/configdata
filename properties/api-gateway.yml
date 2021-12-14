@@ -1,15 +1,15 @@
-server:
-port: 8089
-
-spring:
-cloud:
-gateway:
-routes:
-- id: client-service
-uri: http://localhost:8084/
-predicates:
-- Path=/clientBank/**
 eureka:
-client:
-service-url:
-defaultZone: http://localhost:8099/eureka
+  client:
+    service-url:
+      defaultZone: "http://localhost:8099/eureka"
+server:
+  port: 8089
+spring:
+  cloud:
+    gateway:
+      routes:
+        -
+          id: client-service
+          predicates:
+            - Path=/clientBank/**
+          uri: "http://localhost:8084/"
