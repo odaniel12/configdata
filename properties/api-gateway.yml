@@ -11,10 +11,10 @@ spring:
         - 
           id: client-service
           predicates: 
-            - Path=/client/
+            - Path=/client/**
           uri: "http://localhost:8084/"
         - 
           id: product-service
           predicates: 
-            - Path=/product/
+            - Path=/product/**
           uri: "http://localhost:8086/"
