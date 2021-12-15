@@ -11,7 +11,7 @@ spring:
         - 
           id: client-service
           predicates: 
-            - Path=/clientBank/
+            - Path=/client/
           uri: "http://localhost:8084/"
         - 
           id: product-service
