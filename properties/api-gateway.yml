@@ -18,3 +18,8 @@ spring:
           predicates: 
             - Path=/product/**
           uri: "http://localhost:8086/"
+        - 
+          id: transaction-service
+          predicates: 
+            - Path=/transaction/**
+          uri: "http://localhost:8087/"
